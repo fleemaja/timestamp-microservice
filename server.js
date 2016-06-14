@@ -3,6 +3,7 @@ var moment = require('moment');
 var app = express();
 
 var path = process.cwd();
+var port = process.env.PORT || 3500;
 
 app.get("/", function(request, response) {
   response.sendFile(path + '/index.html');
@@ -32,4 +33,4 @@ app.get("*", function(request, response) {
   response.end("404!");
 });
 
-app.listen(8080);
+app.listen(port);
