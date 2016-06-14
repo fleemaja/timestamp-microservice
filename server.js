@@ -29,8 +29,4 @@ app.get("/:date", function(request, response) {
   }
 });
 
-app.get("*", function(request, response) {
-  response.end("404!");
-});
-
 app.listen(port);
